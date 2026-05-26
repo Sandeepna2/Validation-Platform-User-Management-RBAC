@@ -171,14 +171,20 @@ flowchart LR
 
 ## Screenshots / demo
 
-After the API and `npm run dev` in `frontend/` are running, capture:
+Here are screenshots of the running application:
 
-1. Login screen  
-2. Dashboard showing role and permission summary  
-3. Projects list with create form (as engineer/admin) and review control (as reviewer)  
-4. Users table with role assignment (as admin)
+### 1. Login Screen
+![Login Screen](screenshots/login.png)
 
-Optionally record a short walkthrough video with the same flows.
+### 2. Dashboard (Role & Permission Summary)
+![Dashboard](screenshots/dashboard.png)
+![System Audit Trail](screenshots/audit_trail.png)
+
+### 3. Projects List & Details (Ownership & Review Workflow)
+![Project Details](screenshots/project_details.png)
+
+### 4. Users Table & Role Assignment (Admin UI)
+![User Management](screenshots/user_management.png)
 
 ## Project layout
 
