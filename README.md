@@ -4,7 +4,7 @@ Mini-module for an AI-powered ADAS validation platform: **JWT authentication**, 
 
 ## Quick start
 
-### Option A — Full project (PostgreSQL in Docker + local API + UI)
+###  Full project (PostgreSQL in Docker + local API + UI)
 
 Requires [Docker Desktop](https://www.docker.com/products/docker-desktop/). The repo ships **`docker-compose.yml`** with **only the database**; the FastAPI app and Vite UI still run on your machine (hot reload preserved).
 
@@ -33,7 +33,7 @@ npm run dev
 - UI: `http://localhost:5173` (Vite may use another port if 5173 is busy)
 - DB: `localhost:5432` — user `adas`, password `adas`, database `adas_validation`
 
-### Option B — PostgreSQL you install yourself (no Docker)
+###  PostgreSQL you install yourself (no Docker)
 
 Create role and database (names must match `DATABASE_URL` in `backend/.env` or the default in `backend/app/config.py`):
 
