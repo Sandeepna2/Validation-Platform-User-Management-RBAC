@@ -1,4 +1,4 @@
-# ADAS Validation Platform — User Management & RBAC
+# Validation Platform — User Management & RBAC
 
 Mini-module for an AI-powered ADAS validation platform: **JWT authentication**, **password hashing**, **PostgreSQL** persistence via SQLAlchemy (`postgresql+psycopg://`), **permission-based RBAC**, **validation projects** with ownership and review workflow, and a **React + TypeScript + Tailwind** admin UI (login, dashboard, users, projects, role assignment).
 
