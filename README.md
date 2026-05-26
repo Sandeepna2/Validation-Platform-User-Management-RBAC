@@ -27,7 +27,7 @@ npm install
 npm run dev
 ```
 
-**Windows shortcut:** from `c:\pem_assignment`, run `.\scripts\run-dev.ps1` — it starts `docker compose`, waits for `pg_isready`, then opens new windows for the API and UI.
+**Windows shortcut:** from `c:\`, run `.\scripts\run-dev.ps1` — it starts `docker compose`, waits for `pg_isready`, then opens new windows for the API and UI.
 
 - API: `http://127.0.0.1:8088` (docs: `/docs`)
 - UI: `http://localhost:5173` (Vite may use another port if 5173 is busy)
