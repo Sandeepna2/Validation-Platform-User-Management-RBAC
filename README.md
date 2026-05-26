@@ -196,6 +196,3 @@ README.md
 - HTTPS termination should sit in front of the API in real deployments.
 - Registration allows choosing a non-admin role; admin accounts should be provisioned by trusted operators.
 
-## License
-
-Assessment / sample code — use and modify as needed for your submission.
