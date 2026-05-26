@@ -1,0 +1,20 @@
+# PostgreSQL only — run API + UI on the host (see README or scripts/run-dev.ps1).
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: adas
+      POSTGRES_PASSWORD: adas
+      POSTGRES_DB: adas_validation
+    ports:
+      - "5432:5432"
+    volumes:
+      - adas_pg_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U adas -d adas_validation"]
+      interval: 2s
+      timeout: 5s
+      retries: 15
+
+volumes:
+  adas_pg_data:
