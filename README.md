@@ -9,20 +9,20 @@ Mini-module for an AI-powered ADAS validation platform: **JWT authentication**, 
 Requires [Docker Desktop](https://www.docker.com/products/docker-desktop/). The repo ships **`docker-compose.yml`** with **only the database**; the FastAPI app and Vite UI still run on your machine (hot reload preserved).
 
 ```powershell
-cd c:\pem_assignment
+cd c:\
 docker compose up -d    
 ```
 
 Wait until Postgres is ready, then in **two terminals**:
 
 ```powershell
-cd c:\pem_assignment\backend
+cd c:\backend
 pip install -r requirements.txt
 python -m uvicorn app.main:app --reload --host 127.0.0.1 --port 8088
 ```
 
 ```powershell
-cd c:\pem_assignment\frontend
+cd c:\frontend
 npm install
 npm run dev
 ```
