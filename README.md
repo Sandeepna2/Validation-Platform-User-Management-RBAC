@@ -147,56 +147,7 @@ erDiagram
   }
 ```
 
-Equivalent DDL (abbreviated):
 
-```sql
-CREATE TABLE users (
-  id SERIAL PRIMARY KEY,
-  name VARCHAR(255) NOT NULL,
-  email VARCHAR(255) NOT NULL UNIQUE,
-  password_hash VARCHAR(255) NOT NULL,
-  is_active BOOLEAN NOT NULL DEFAULT TRUE,
-  created_at TIMESTAMPTZ DEFAULT now(),
-  updated_at TIMESTAMPTZ DEFAULT now()
-);
-
-CREATE TABLE roles (
-  id SERIAL PRIMARY KEY,
-  name VARCHAR(64) NOT NULL UNIQUE,
-  description TEXT
-);
-
-CREATE TABLE permissions (
-  id SERIAL PRIMARY KEY,
-  code VARCHAR(128) NOT NULL UNIQUE,
-  description TEXT
-);
-
-CREATE TABLE role_permissions (
-  role_id INTEGER NOT NULL REFERENCES roles(id) ON DELETE CASCADE,
-  permission_id INTEGER NOT NULL REFERENCES permissions(id) ON DELETE CASCADE,
-  PRIMARY KEY (role_id, permission_id)
-);
-
-CREATE TABLE user_roles (
-  id SERIAL PRIMARY KEY,
-  user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
-  role_id INTEGER NOT NULL REFERENCES roles(id) ON DELETE CASCADE,
-  CONSTRAINT uq_user_roles_user_id UNIQUE (user_id)
-);
-
-CREATE TABLE projects (
-  id SERIAL PRIMARY KEY,
-  name VARCHAR(255) NOT NULL,
-  vehicle_platform VARCHAR(128) NOT NULL,
-  odd_type VARCHAR(128) NOT NULL,
-  status VARCHAR(64) NOT NULL DEFAULT 'draft',
-  review_status VARCHAR(64) NOT NULL DEFAULT 'pending',
-  created_by_id INTEGER NOT NULL REFERENCES users(id),
-  created_at TIMESTAMPTZ DEFAULT now(),
-  updated_at TIMESTAMPTZ DEFAULT now()
-);
-```
 
 ## Architecture
 
