@@ -46,7 +46,7 @@ Copy `backend/.env.example` to `backend/.env` if you need custom `DATABASE_URL` 
 
 Then run the same **backend** and **frontend** commands as in option A.
 
-### Demo accounts (seeded on API startup)
+### Demo accounts (seeded on API)
 
 | Email                 | Password       | Role                 |
 | --------------------- | -------------- | -------------------- |
