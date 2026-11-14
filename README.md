@@ -4,7 +4,7 @@ Mini-module for an AI-powered ADAS validation platform: **JWT authentication**, 
 
 ## Quick start
  
-###  Full project (PostgreSQL in Docker + local API + UI)
+###  Full project (PostgreSQL in Docker + local API + UI) 
 
 Requires [Docker Desktop](https://www.docker.com/products/docker-desktop/). The repo ships **`docker-compose.yml`** with **only the database**; the FastAPI app and Vite UI still run on your machine (hot reload preserved).
 
